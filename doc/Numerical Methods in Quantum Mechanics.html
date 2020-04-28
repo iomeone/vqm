@@ -1,0 +1,565 @@
+
+<!-- saved from url=(0057)http://www.fisica.uniud.it/~giannozz/Didattica/MQ/mq.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <meta name="Author" content="Paolo Giannozzi">
+   <title>Numerical Methods in Quantum Mechanics</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<!--<base href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/welcome.html">--><base href=".">
+
+<ul>&nbsp;
+
+<center><b><font color="#FF0000"><font size="+3">
+Numerical Methods in Quantum Mechanics</font></font></b><br>
+<br><font size="+2">
+<a href="http://df.units.it/it/didattica/corsi-laurea/laurea-magistrale">
+Corso di Laurea Magistrale Interateneo (Master) in Physics</a></font><br>
+<br><font size="+2">Academic Year 2019/2020</font> <br><br>
+</center>
+</ul>
+<font size="+1">
+<p>
+</p><p align="center"><font size="+2">
+    <b>STARTS ON-LINE (MS TEAMS) ON WEDNESDAY 11</b></font>
+</p>
+<b>Teacher:</b> Paolo Giannozzi, room L1-2-BE, Department of Mathematics,
+Computer Science and Physics, Via delle Scienze 206, Udine<br> 
+tel. +39 0432 558216, fax  +39 0432 558222<br>
+web: <a href="http://www.fisica.uniud.it/~giannozz">
+http://www.fisica.uniud.it/~giannozz</a>, 
+e-mail: paolo . giannozzi <i>at</i> uniud . it<br>
+<del><i>Office hours:</i> during the semester I'll be in the Physics building 
+	on Monday and Wednesday from 9:30 to 11:00.</del>
+Send me an e-mail or phone me 
+to get an appointment <del>(in Trieste or in Udine) at a different time.</del>
+
+<p align="center"><a name="programma"></a><font size="+2">Course Description
+</font></p>
+<p>
+<b>Goals:</b>
+this course provides an introduction to numerical methods and techniques 
+useful for the numerical solution of quantum mechanical problems, especially 
+in atomic and condensed-matter physics. The course is organized as a 
+series of theoretical lessons in which the physical problems and the
+numerical concepts needed for their resolution are presented, followed
+by practical sessions in which examples of implementatation for specific
+simple problems are presented. The student will learn to use the concepts
+and to practise scientific programming by modifying and extending the
+examples presented during the course.
+</p><p><b>Syllabus:</b>
+Schroedinger equations in one dimension: techniques for numerical solutions.
+Solution of the Schroedinger equations for a potential with spherical symmetry.
+Scattering from a potential.
+Variational method: expansion on a basis of functions, secular problem,
+eigenvalues and eigenvectors.
+Examples: gaussian basis, plane-wave basis.
+Many-electron systems: 
+Hartree and Hartree-Fock equations: self-consistent field, exchange 
+interaction. Numerical solution of Hartree-Fock equations in atoms
+with radial integration and on a gaussian basis set. Introduction to
+numerical solution of electronic states in molecules. Electronic states
+in solids: solution of the Schroedinger equation for periodic potentials.
+Introduction to exact diagonalization of spin systems. Introduction to 
+Density-Functional Theory.
+
+</p><p><b>Bibliography</b><br>
+Lecture Notes (updated):
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-intro.pdf">Introduction</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap1.pdf">Ch.1</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap2.pdf">Ch.2</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap3.pdf">Ch.3</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap4.pdf">Ch.4</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap5.pdf">Ch.5</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-app.pdf">Appendix</a>, 
+yet to be updated:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap6.pdf">Ch.6</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap7.pdf">Ch.7</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap8.pdf">Ch.8</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap9.pdf">Ch.9</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap10.pdf">Ch.10</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap11.pdf">Ch.11</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq-cap12.pdf">Ch.12</a>,
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/mq.pdf">all</a>.<br>
+See also: 
+J. M. Thijssen, <i>Computational Physics</i>, Cambridge University Press,
+Cambridge, 1999, Ch.2-4, 5, 6.1-6.4, 6.7.<br>
+A rather detailed introduction to Density-Functional techniques can 
+be found in the first chapters of the lecture notes of my (now defunct)
+course on
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MetNum/metnum.html">
+Numerical Methods in Electronic Structure</a>.
+
+</p><p><b>Requirements:</b> basic knowledge of Quantum Mechanics,
+of Fortran or C programming, of an operating system (preferrably Linux).
+</p><p>
+
+</p><p><b>Exam:</b> personal project consisting in the numerical solution
+of a problem, followed by oral examination (typically consisting in 
+the discussion of a subject, different from the one of the personal
+project, chosen by the student). Contact me a few weeks before the 
+exam to receive the personal project (if not yet assigned) and to
+set a date. A short written report on the personal project and the
+related code(s) should be provided no later than the day before the exam.
+</p><p>
+
+</p><hr>
+
+<p align="center"><a name="programma"></a><font size="+2">Schedule
+</font></p>
+The course starts on <b>March <del>2nd</del> <del>9th</del> <ins>11th</ins>
+</b>.
+Classes are held <ins>online until further notice</ins>
+<ul>
+	<li>Monday    11-13, <del>Aula C</del></li>
+	<li>Tueaday 14-16 <del>Wednesday 11-13, Aula Poropat (infolab)</del></li>
+</ul>
+Deviation from the above schedule are marked in boldface in the detailed table
+of subjects below.<br>
+<br>
+
+<table cellpadding="2" cellspacing="2" border="1" width="100%" align="center">
+<tbody>
+<tr>
+<td valign="top" align="center">  
+      <h3>N.<br></h3>
+</td>
+<td valign="top" align="center"> 
+      <h3>Date<br> </h3>
+</td>
+<td valign="top" align="center">    
+      <h3>Subject<br> </h3>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+1.
+<br> </td>
+<td valign="top" align="center">
+11 March
+<br> </td>
+<td valign="top" align="left">
+<i>One-dimensional Schroedinger equation: </i><br>
+general features of the discrete spectrum, relationship between
+energy, parity, number of intersections of a solution. Harmonic oscillator: 
+analytical solution. Discretization, Numerov algorithm, numerical stability,
+eigenvalue search using stable outwards and inwards integrations.
+(Notes: Ch.1)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+2.
+<br> </td>
+<td valign="top" align="center">
+16 March
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Numerical solution of the one-dimensional Schroedinger equation: </i><br>
+examples for the harmonic oscillator (code <i>harmonic0</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/harmonic0.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/harmonic0.c">C</a>; 
+code <i>harmonic1</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/harmonic1.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/harmonic1.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+3.
+<br> </td>
+<td valign="top" align="center">
+18 March
+<br> </td>
+<td valign="top" align="left">
+<i>Three-dimensional Schroedinger equation: </i><br>
+Central potentials, variable separation, logarithmic grids,
+perturbative estimate to accelerate eigenvalue convergence.
+(Notes: Ch.2). A glimpse on true three-dimensional problems on a grid.
+(Notes: appendix B)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+4.
+<br> </td>
+<td valign="top" align="center">
+23 March
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Numerical solution for spherically symmetric potentials: </i><br>
+example for Hydrogen atom 
+(code <i>hydrogen_radial</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/hydrogen_radial.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/hydrogen_radial.c">C</a>; 
+needed Fortran routines
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/solve_sheq.f90">solve_sheq</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/init_pot.f90">init_pot</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/do_mesh.f90">do_mesh</a>)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+5.
+<br> </td>
+<td valign="top" align="center">
+25 March
+<br> </td>
+<td valign="top" align="left">
+<i>Scattering from a potential:</i><br>
+cross section, phase shifts, resonances.
+(Notes: Ch.3; Thijssen: Ch.2)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+6.
+<br> </td>
+<td valign="top" align="center">
+30 March
+<br><i>pratical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Calculation of cross sections:</i><br>
+numerical solution for Lennard-Jones potential
+(code <i>crossection</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/crossection.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/crossection.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+7.
+<br> </td>
+<td valign="top" align="center">
+1 April
+<br> </td>
+<td valign="top" align="left">
+<i>Variational method:</i><br>
+Schroedinger equation as minimum problem,
+expansion on a basis of functions, secular problem,
+introduction to diagonalization algorithms.
+(Notes: Ch.4; Thijssen: Ch.3)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+8.
+<br> </td>
+<td valign="top" align="center">
+6 April
+<br><i>pratical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Variational method using an orthonormal basis set:</i><br> 
+example of a potential well in plane waves
+(code <i>pwell</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/pwell.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/pwell.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+9.
+<br> </td>
+<td valign="top" align="center">
+	<b>7 April, 14-16</b>
+<br> </td>
+<td valign="top" align="left">
+<i>Non-orthonormal basis sets:</i><br> 
+gaussian functions.
+(Notes: Ch.5)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+10.
+<br> </td>
+<td valign="top" align="center">
+14 April
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Variational method with gaussian basis set:</i><br> 
+solution for Hydrogen atom 
+(code <i>hydrogen_gauss</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/hydrogen_gauss.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/hydrogen_gauss.c">C</a>; 
+needed Fortran routine
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/diag.f90">diag</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+11.
+<br> </td>
+<td valign="top" align="center">
+20 April
+<br> </td>
+<td valign="top" align="left">
+<i>Self-consistent field:</i><br> 
+solution of the many-body problem: 
+Hartree method, self-consistent field.
+(Notes: Ch.6)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+12.
+<br> </td>
+<td valign="top" align="center">
+21 April
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i> He atom with Hartree approximation:</i><br>
+solution with radial integration and self-consistency (code
+<i>helium_hf_radial</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/helium_hf_radial.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/helium_hf_radial.c">C</a>).
+</td>
+</tr>
+
+
+<tr>
+<td valign="top" align="center">
+13.
+<br> </td>
+<td valign="top" align="center">
+27 April
+<br> </td>
+<td valign="top" align="left">
+  <i>Hartree-Fock method:</i><br>
+Slater determinants, Hartree-Fock equations
+(Notes: Ch.7; Thijssen: Ch.4.1-4.5)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+14.
+<br> </td>
+<td valign="top" align="center">
+28 April
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i> Helium atom with Hartree-Fock approximation:</i><br>
+solution with gaussian basis and diagonalization
+(code <i>helium_hf_gauss</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/helium_hf_gauss.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/helium_hf_gauss.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+15.
+<br> </td>
+<td valign="top" align="center">
+4 May
+<br> </td>
+<td valign="top" align="left">
+<i>Molecules:</i><br>
+Born-Oppenheimer approximation, potential energy surface,
+diatomic molecules.
+introduction to numerical solution for molecules.
+(Notes: Ch.8; Thijssen: Ch.4.6-4.8)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+16.
+<br> </td>
+<td valign="top" align="center">
+5 May
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Molecules with gaussian basis:</i><br>
+solution of Hartree-Fock equations on a gaussian basis 
+for a H<sub>2</sub> molecule (code <i>h2_hf_gauss</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/h2_hf_gauss.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/h2_hf_gauss.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+17.
+<br> </td>
+<td valign="top" align="center">
+11 May
+<br> </td>
+<td valign="top" align="left">
+<i>Electronic states in crystals:</i><br>
+Bloch theorem, band structure.
+(Notes: Ch.9; Thijssen: Ch.4.6-4.8)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+18.
+<br> </td>
+<td valign="top" align="center">
+12 May
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Periodic potentials:</i><br>
+numerical solution with plane waves of the Kronig-Penney model
+(code <i>periodicwell</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/periodicwell.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/periodicwell.c">C</a>;
+needed Fortran routine
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/cft.f90">cft</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+19.
+<br> </td>
+<td valign="top" align="center">
+18 May
+<br> </td>
+<td valign="top" align="left">
+<i>Electronic states in crystals II:</i><br>
+three-dimensional case, methods of solution, 
+plane wave basis set, introduction to the
+concept of pseudopotential.
+(Notes: Ch.10; Thijssen: Ch.6.1-6.4, 6.7)
+</td>
+</tr><tr>
+
+</tr>
+<tr><td valign="top" align="center">
+20.
+<br> </td>
+<td valign="top" align="center">
+19 May
+<br><i>pratical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Pseudopotentials: </i><br>
+solution of the 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/cohenbergstresser.pdf">Cohen-Bergstresser</a> model
+for Silicon
+(code <i>cohenbergstresser</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/cohenbergstresser.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/cohenbergstresser.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+21.
+<br> </td>
+<td valign="top" align="center">
+25 May
+<br> </td>
+<td valign="top" align="left">
+<i>Spin systems</i><br>
+Introduction to spin systems: Heisenberg model,
+exact diagonalization, iterative methods for
+diagonalization, sparseness. 
+(Notes: Ch.11)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+22.
+<br> </td>
+<td valign="top" align="center">
+26 May
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Exact Diagonalization</i><br>
+Solution of the Heisenberg model with Lanczos chains
+(code <i>heisenberg_exact</i>:
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/heisenberg_exact.f90">fortran</a>, 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/C/heisenberg_exact.c">C</a>).
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+23.
+<br> </td>
+<td valign="top" align="center">
+1 June
+<br>
+<br> </td>
+<td valign="top" align="left">
+<i>
+Density-Functional Theory</i><br>
+Introduction to the theory and to the plane-wave pseudopotential
+method (Notes: Ch.12)
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="center">
+24.
+<br> </td>
+<td valign="top" align="center">
+2 June
+<br>
+<br> </td>
+<td valign="top" align="left">
+<i>Density-Functional Theory II</i><br>
+Fast Fourier-Trasform and iterative techniques
+(<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/ah_slow.f90">dumb</a> and 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/Software/F90/ah.f90">less dumb</a> code,
+only Fortran, solving Si with 
+<a href="http://www.fisica.uniud.it/~giannozz/Didattica/MQ/LectureNotes/Appelbaum-Hamann.pdf">Appelbaum-Hamann</a> 
+pseudopotentials).
+<br>
+Assignment of exam problems.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<i>Last modified April 7, 2020</i>
+
+
+
+<!--
+<tr>
+<td valign="top" align="center">
+13.
+<br> </td>
+<td valign="top" align="center">
+19 April
+<br><i>practical session</i> 
+<br> </td>
+<td valign="top" align="left">
+<i>Helium atom:</i><br> 
+exact solution using a gaussian basis set
+(code <i>helium_gauss</i>:
+<a href="Software/F90/helium_gauss.f90">fortran</a>, 
+<a href="Software/C/helium_gauss.c">C</a>).
+</td>
+</tr>
+-->
+</font></body></html>
